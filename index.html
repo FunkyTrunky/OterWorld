@@ -136,12 +136,13 @@ body {
 /* ——— HERO (Home) ——— */
 .hero-section { position: relative; text-align: center; padding: 30px 22px 100px; background: #fff; }
 .hero-banner { max-width: 30%; height: auto; display: block; margin: 0 auto 10px; }
-.hero-subtitle { font-size: 28px; font-weight: 400; color: #6e6e73; margin-bottom: 20px; margin-top: 20px; }
+.hero-subtitle { font-size: 28px; font-weight: 400;  margin-bottom: 5px; margin-top: 5px; animation: rainbow-text 10s linear infinite; }
 .video-container { max-width: 480px; max-height: 608px; margin: 0 auto 60px; padding: 0 40px; display: flex; flex-direction: column; align-items: center; }
-.promo-video { width: 100%; height: 400px; object-fit: cover; border-radius: 12px; background: #000; }
+.promo-video { width: 100%; height: 400px; object-fit: cover; border-radius: 12px;  background: #000; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: transform .3s;}
+.promo-video:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
 
 .featured-products { display: flex; justify-content: center; gap: 40px; margin-bottom: 60px; padding: 0 22px; }
-.product-card { background: rgba(0,0,0,0.03); border-radius: 18px; padding: 30px 20px; text-align: center; width: 220px; cursor: pointer; transition: .3s; border: 1px solid rgba(0,0,0,0.08); position: relative; }
+.product-card { animation: rainbow 10s linear infinite; border-radius: 18px; padding: 30px 20px; text-align: center; width: 220px; cursor: pointer; transition: .3s; border: 1px solid rgba(0,0,0,0.08); position: relative; }
 .product-card:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-color: rgba(0,0,0,0.15); }
 .product-image { width: 120px; height: 120px; margin: 0 auto 20px; border-radius: 50%; overflow: hidden; background: linear-gradient(135deg,#f5f5f7,#e8e8ed); display: flex; align-items: center; justify-content: center; transition: transform .3s; }
 .product-image img { width: 100%; height: 100%; object-fit: cover; }
@@ -151,24 +152,58 @@ body {
 .hover-popup { position: absolute; top: 0; left: 50%; transform: translateX(-50%) translateY(-110%); background: rgba(0,0,0,0.8); color: #fff; padding: 10px 20px; border-radius: 8px; font-size: 14px; white-space: nowrap; opacity: 0; visibility: hidden; transition: .3s; z-index: 10; }
 .product-card:hover .hover-popup { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(-130%); }
 
-.join-button { background: #570ba7; color: #fff; border: none; padding: 12px 24px; border-radius: 980px; font-size: 16px; font-weight: 500; cursor: pointer; margin-bottom: 20px;}
-.join-button:hover { background: #7217d4; }
+.join-button { background: #570ba7; color: #fff; border: none; padding: 12px 24px; border-radius: 980px; font-size: 16px; font-weight: 500; cursor: pointer; margin-bottom: 20px; margin-top:10px;animation:  rainbow 10s linear infinite;transition: transform .3s;}
+.join-button:hover { background: #7217d4;transform: scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
 
 /* ——— ACCESSORIES PAGE ——— */
-.accessories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; padding: 80px 22px; max-width: 1024px; margin: 0 auto; }
-.accessory-card { background: rgba(0,0,0,0.03); border-radius: 18px; padding: 40px; text-align: center; border: 1px solid rgba(0,0,0,0.1); transition: .3s; }
+.accessores-main-title{font-size: 48px; font-weight: 700; text-align: center; padding: 50px 22px; background: linear-gradient(135deg,#1d1d1f,#424245); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.accessories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));margin-bottom: -10px; gap: 40px; padding: 0px 22px; max-width: 1024px; margin: 0 auto; }
+.accessory-card { animation: rainbow 10s linear infinite; border-radius: 18px; padding: 40px; text-align: center; border: 1px solid rgba(0,0,0,0.1); transition: .3s; }
 .accessory-card:hover { transform: translateY(-8px); border-color: rgba(0,0,0,0.2); }
 .accessory-title { font-size: 24px; font-weight: 600; margin-bottom: 16px; }
-.accessory-description { color: #6e6e73; margin-bottom: 24px; }
+.accessory-description { animation: text-colore 10s linear infinite; margin-bottom: 24px; }
 .accessory-price { font-size: 20px; font-weight: 600; color: #0071e3; margin-bottom: 24px; }
 .buy-button { background: #570ba7; color: #fff; border: none; padding: 12px 24px; border-radius: 980px; font-size: 14px; font-weight: 500; cursor: pointer; }
 .buy-button:hover { background: #7217d4; }
 
 /* ——— METAVERSE PAGE ——— */
-.metaverse-content { max-width: 800px; margin: 0 auto; padding: 80px 22px; }
-.section-title { font-size: 48px; font-weight: 700; text-align: center; margin-bottom: 48px; background: linear-gradient(135deg,#1d1d1f,#424245); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.metaverse-section { margin-bottom: 48px; padding: 40px; background: rgba(0,0,0,0.03); border-radius: 18px; border: 1px solid rgba(0,0,0,0.1); }
-.metaverse-section h3 { font-size: 24px; font-weight: 600; margin-bottom: 16px; }
+.metaverse-content { max-width: 800px; margin: 0 auto;  }
+.section-title { font-size: 48px; font-weight: 700; text-align: center; padding: 50px 22px; background: linear-gradient(135deg,#1d1d1f,#424245); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.metaverse-section { margin-bottom: 48px; padding: 40px; background: rgba(0,0,0,0.03); border-radius: 18px; border: 1px solid rgba(0,0,0,0.1); animation: rainbow 10s linear infinite;}
+.metaverse-section h3 { font-size: 24px; font-weight: 600; margin-bottom: 16px; text-align: center; animation: text-colore 10s linear infinite; }
+.metaverse-section h4 { font-size: 20px; font-weight: 500;  margin-bottom: 24px; text-align: center;animation: text-colore 10s linear infinite; }
+.metaverse-section h5 { font-size: 14px; font-weight: 400;  margin-bottom: 16px; text-align: center; animation: text-colore 10s linear infinite;}
+.metaverse-section p { font-size: 16px; line-height: 1.6;  margin-bottom: 16px; text-align: justify;animation: text-colore 10s linear infinite; }
+@keyframes rainbow {
+  0%   { background-color: rgb(170, 50, 234); }
+  16%  { background-color: rgb(214, 90, 255); }
+  33%  { background-color: rgb(170, 50, 234); }
+  50%  { background-color: rgb(214, 90, 255); }
+  66%  { background-color: rgb(170, 50, 234); }
+  83%  { background-color: rgb(214, 90, 255); }
+  100% { background-color: rgb(170, 50, 234); }
+}
+@keyframes rainbow-text {
+  0%   { color: rgb(86, 17, 123); }
+  16%  { color: rgb(214, 90, 255); }
+  33%  { color: rgb(86, 17, 123); }
+  50%  { color: rgb(214, 90, 255); }
+  66%  { color: rgb(86, 17, 123); }
+  83%  { color: rgb(214, 90, 255); }
+  100% { color: rgb(86, 17, 123); }
+}
+@keyframes text-colore {
+  0%   { color: rgb(0, 0, 0); }
+  16%  { color: rgb(63, 63, 63); }
+  33%  { color: rgb(0, 0, 0); }
+  50%  { color: rgb(63, 63, 63); }
+  66%  { color: rgb(0, 0, 0); }
+  83%  { color: rgb(63, 63, 63); }
+  100% { color: rgb(0, 0, 0); }
+}
+
+.metaverse-section img { width: 100%; max-width: 400px; border-radius: 12px; margin-top: 20px; display: block; margin-left: auto; margin-right: auto; }
+.ceo-img { width: 100%; max-width: 400px; border-radius: 12px; margin-top: 20px; margin-left: 100px; }
 
 /* ——— MOBILE ——— */
 @media (max-width: 768px) {
@@ -198,6 +233,7 @@ body {
     opacity: 0.9;
     background-color: transparent;
     margin-top: 5px;
+    transition: opacity 0.7s ease-in-out;
   }
 
   /* link stile mobile */
@@ -213,17 +249,27 @@ body {
     text-align: center;
     border-radius:8px;
     background: #ccc;
-    transition: background .9s;
+    
     opacity: 1;
     color: #000000;
     margin-top: 1px;
   }
   .nav-links a:hover,
   .nav-links a.active {
-    background: #570ba7;
+    animation: rainbow 10s linear infinite;
     color: #ffffff;
     border: radius 8px;
   }
+  @keyframes rainbow {
+  0%   { background-color: rgb(170, 50, 234); }
+  16%  { background-color: rgb(214, 90, 255); }
+  33%  { background-color: rgb(170, 50, 234); }
+  50%  { background-color: rgb(214, 90, 255); }
+  66%  { background-color: rgb(170, 50, 234); }
+  83%  { background-color: rgb(214, 90, 255); }
+  100% { background-color: rgb(170, 50, 234); }
+}
+  .ceo-img { width: 100%; max-width: 400px; border-radius: 12px; margin-top: 20px; margin-left: 0px; }
 
   
   /* rimuove spazio centrale inutile */
@@ -237,11 +283,12 @@ body {
   .promo-video { height: 250px; }
   .featured-products { flex-direction: column; align-items: center; gap: 20px; }
   .product-card { width: 100%; max-width: 300px; }
-  .accessories-grid { grid-template-columns: 1fr; padding: 60px 16px; }
+  .accessories-grid { grid-template-columns: 1fr; padding: 30px 16px; }
   .hero-banner { max-width: 80%; height: auto; margin-bottom: 20px; }
-  .metaverse-content { padding: 60px 16px; }
+  .metaverse-content { padding: 5px 16px; }
   .hero-subtitle { font-size: 22px; }
   .section-title { font-size: 36px; }
+  .accessores-main-title { font-size: 36px; margin-bottom: -35px; }
 }
 </style>
 </head>
@@ -281,8 +328,11 @@ body {
   <div class="page active" id="home">
     <section class="hero-section">
       <img src="img/logo_Home.png" alt="" class="hero-banner">
-      <h1 class="hero-subtitle">Win a 7-day free trial of the Otherworld VR headset and get exclusive beta access to the Metaverse. All accessories included. Enter now and be among the first to explore Otherworld.</h1>
-      <button class="join-button" onclick="openJoin()">Join Us</button>
+      <h1 class="hero-subtitle">Win a 7-day free trial of the Otherworld VR headset </h1> 
+      <h1 class="hero-subtitle">and get exclusive beta access to the Metaverse.</h1>
+      <h2 class="hero-subtitle">All accessories included.</h2>
+      <h3 class="hero-subtitle">Enter now and be among the first to explore Otherworld.</h3>
+      <button class="join-button" onclick="openJoin()">Join The Content</button>
       <div class="video-container">
         <video class="promo-video" controls autoplay muted loop>
           <source src="short.mp4" type="video/mp4">
@@ -311,30 +361,25 @@ body {
 
   <!-- ACCESSORIES -->
   <div class="page" id="accessori">
+    <h1 class="accessores-main-title">Accessories</h1>
     <section class="accessories-grid">
       <div class="accessory-card">
         <div class="product-image"><img src="img/Generic VR Headset.H03.2k.png" alt=""></div>
         <h3 class="accessory-title">Vision VR</h3>
         <p class="accessory-description">Immerse yourself fully in the metaverse with 4K resolution per eye and ultra-precise tracking.</p>
-        <button class="buy-button">Here</button>
+        
       </div>
       <div class="accessory-card">
         <div class="product-image" style="font-size:42px">🎮</div>
         <h3 class="accessory-title">Haptic Controllers</h3>
         <p class="accessory-description">Advanced haptic feedback compatible with all OtherWorld devices.</p>
-        <button class="buy-button">Here</button>
+        
       </div>
       <div class="accessory-card">
         <div class="product-image"><img src="img/tuta.jpeg" alt=""></div>
         <h3 class="accessory-title">Sensory Suit</h3>
         <p class="accessory-description">Integrated sensors for motion and full tactile feedback.</p>
-        <button class="buy-button">Here</button>
-      </div>
-      <div class="accessory-card">
-        <div class="product-image" style="font-size:42px">⚡️</div>
-        <h3 class="accessory-title">Charging Station</h3>
-        <p class="accessory-description">Keep all your devices ready in style.</p>
-        <button class="buy-button">Here</button>
+        
       </div>
     </section>
   </div>
@@ -344,20 +389,28 @@ body {
     <section class="metaverse-content">
       <h2 class="section-title">The Metaverse</h2>
       <div class="metaverse-section">
-        <h3>What is Metaverse?</h3>
-        <p>Shared virtual space where people can interact, work, play and create in entirely new ways.</p>
-      </div>
-      <div class="metaverse-section">
         <h3>Our Vision</h3>
-        <p>An accessible, inclusive and meaningful metaverse for all.</p>
+        <h4>Reimagining connection. Redefining reality.</h4>
+        <p>At OtherWorld, we believe the future isn’t something we wait for: it’s something we build.</p>
+        <p>Our vision is to create a metaverse where human connection, exploration, and imagination are no longer limited by space or time.</p> 
+        <p>We see a world where experiences are not consumed: they are lived.</p>
+        <p>Where presence is more than being there.
+          Where identity is fluid, and freedom is absolute.</p>
+        <p>The border between reality and simulation is fading.
+        We’re not just embracing that shift: we’re leading it.</p>
       </div>
       <div class="metaverse-section">
-        <h3>Innovative Technologies</h3>
-        <p>Real-time rendering, AI and blockchain ensure an unprecedented experience.</p>
-      </div>
-      <div class="metaverse-section">
-        <h3>The Future is Now</h3>
-        <p>Join us on this journey towards a shared and immersive digital future.</p>
+        <h3>Meet the Mind Behind the Vision</h3>
+        <p>With a background in neurotechnology and immersive systems, Dr. Peter Midas has spent the last decade pioneering interfaces that connect humans and machines on an intuitive level.</p>
+
+        <p>Driven by a relentless belief in progress and digital transcendence, he founded OtherWorld to break the final boundary: the one between thought and experience.</p>
+
+        <p>"We’re not building a product. We’re building the next evolutionary step in human interaction."
+        — Dr. Peter Midas</p>
+
+        <p>His leadership combines technical precision with visionary purpose — making OtherWorld not just a company, but a movement.</p>
+        <img class= "ceo-img" src="img/ceo.jpeg" alt="Dr. Peter Midas" style="width:100%; max-width:400px; border-radius:12px; margin-top:20px;">
+        <h5>Dr. Peter Midas — Founder & CEO of OtherWorld</h5>
       </div>
     </section>
   </div>
